@@ -23,8 +23,9 @@ StaticMock provides Mockery-like DSL for static methods. StaticMock depends on r
 ## Requirements
 
  - PHP >=5.3
- - runkit >=1.0.3(PHP <= 5.6)
- - uopz >= 5.0.1(PHP >= 7)
+ - runkit >=1.0.3 (PHP <= 5.6)
+ - runkit7 (PHP >= 7)
+ - uopz >= 5.0.1 (PHP >= 7)
 
 To install runkit, execute the following commands and add `extension=runkit.so` to php.ini.
 
@@ -32,7 +33,7 @@ To install runkit, execute the following commands and add `extension=runkit.so` 
 pecl install runkit
 ```
 
-For PHP 7, Please try [pecl uopz extension](http://pecl.php.net/package/uopz).
+For PHP 7, Please try [runkit7/runkit7](https://github.com/runkit7/runkit7) or [pecl uopz extension](http://pecl.php.net/package/uopz).
 
 To install uopz, execute the following commands and add `extension=uopz.so` to php.ini.
 
