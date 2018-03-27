@@ -30,6 +30,7 @@
  */
 
 namespace StaticMock\MethodReplacer;
+
 use StaticMock\Exception\ClassNotFoundException;
 use StaticMock\Exception\MethodNotFoundException;
 
@@ -37,7 +38,8 @@ use StaticMock\Exception\MethodNotFoundException;
  * Class MethodReplaceableClass
  * @package StaticMock\MethodReplacer
  */
-class MethodReplaceableClass {
+class MethodReplaceableClass
+{
 
     private $class_name;
 
@@ -62,8 +64,7 @@ class MethodReplaceableClass {
             return call_user_func_array(
                 array('StaticMock\\MethodReplacer\\MethodInvoker', 'invoke'),
                 array_merge(array('{$class_name}', '{$method_name}'), func_get_args())
-            );"
-        ;
+            );";
     }
 
     private function getStashedMethodName($method_name)
@@ -137,7 +138,6 @@ class MethodReplaceableClass {
     }
 
     /**
-     *
      * Remove the information about the pseudo implementation of the method
      *
      * @param string $method_name
@@ -151,6 +151,7 @@ class MethodReplaceableClass {
             runkit_method_remove($this->class_name, $method_name);
             runkit_method_rename($this->class_name, $this->getStashedMethodName($method_name), $method_name);
         }
+
         unset($this->methods[$method_name]);
 
         return $this;
