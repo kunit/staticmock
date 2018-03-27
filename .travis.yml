@@ -12,7 +12,7 @@ matrix:
     - php: 5.4
 
 before_script:
-  - ci/install_runkit_for_php_version.sh
+  - ci/install_extension_for_php_version.sh
   - composer install
 
 script:
