@@ -7,6 +7,3 @@ if expr "$PHP_MAJOR_VERSION" ">=" "7" ; then
 else
 	pecl install runkit
 fi
-
-php -i | grep uopz
-php -i | grep runkit
